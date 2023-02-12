@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.top-layer{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.first-box img{
+    max-width: 100%;
+    display: inherit;
+}
+
+.second-box{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head h1{
+    font-family: 'Fraunces',sans-serif;
+    font-size: 36px;
+    line-height: 1em;
+    color: hsl(212,21%,14%);
+
+}
+
+.para{
+    color: hsl(228,12%,48%);
+    line-height: 1.6em;
+    font-size: 1.5em;
+
+}
+
+.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price .price1{
+    font-family: 'Fraunces',sans-serif;
+    color: hsl(158,36%,37%);
+    font-size: 34px;
+}
+
+.price .price2{
+    color: hsl(228,12%,4%);
+    text-decoration: line-through;
+    font-size: 20px;
+
+}
+
+.cart{
+    background: hsl(158,36%,37%);
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-flex;
+}
+
+.cart img{
+    padding-right: 18px;
+    padding-left: 55px;
+
+}
+
+@media only screen and (max-width: 695px){
+
+    .top-layer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .first-box img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .second-box{
+        display: block;
+    }
+
+    .head h1, .para, .price{
+        padding: 23px;
+    }
+
+    .cart{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 381px){
+
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .first-box img{
+        max-height: 298px;
+    }
+
+    .second-box{
+        padding: 20px;
+    }
+
+    .head h1, .para, .price{
+        padding: 7px;
+    }
+
+    .price .price1{
+        font-size: 26px;
+    }
+    .price .price2{
+    font-size: 15px;
+    }
+    .cart{
+        font-size: 10px;
+    }
+
+
+}
+
